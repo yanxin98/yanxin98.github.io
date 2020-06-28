@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/6 | Hexo</title>
+  <title>第2章  变量和简单的数据类型 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2020/06/index.html">
+  <meta name="description" content="2.1  运行hello_world.py时发生的情况hello_world.py 1print(&quot;Hello Python world!&quot;) 运行文件hello_world.py时，末尾的.py指出这是一个Python程序，因此编辑器将使用Python解释器 来运行它。 Python解释器读取整个程序，确定其中每个单词的含义。例如，看到单词print时，解释器就会将括号中的内容打印到屏幕，而不会">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第2章  变量和简单的数据类型">
+<meta property="og:url" content="http://yoursite.com/2020/06/28/%E7%AC%AC2%E7%AB%A0-%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="2.1  运行hello_world.py时发生的情况hello_world.py 1print(&quot;Hello Python world!&quot;) 运行文件hello_world.py时，末尾的.py指出这是一个Python程序，因此编辑器将使用Python解释器 来运行它。 Python解释器读取整个程序，确定其中每个单词的含义。例如，看到单词print时，解释器就会将括号中的内容打印到屏幕，而不会">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-06-27T23:20:16.000Z">
+<meta property="article:modified_time" content="2020-06-28T00:23:12.338Z">
 <meta property="article:author" content="Xin Blog">
+<meta property="article:tag" content="python基础知识">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -130,36 +135,129 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-第2章-变量和简单的数据类型" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/28/%E7%AC%AC2%E7%AB%A0-%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="archive-article-date">
-  	<time datetime="2020-06-27T23:20:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-28</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/28/%E7%AC%AC2%E7%AB%A0-%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">第2章  变量和简单的数据类型</a>
+    <h1 class="article-title" itemprop="name">
+      第2章  变量和简单的数据类型
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/06/28/%E7%AC%AC2%E7%AB%A0-%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="archive-article-date">
+  	<time datetime="2020-06-27T23:20:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="2-1-运行hello-world-py时发生的情况"><a href="#2-1-运行hello-world-py时发生的情况" class="headerlink" title="2.1  运行hello_world.py时发生的情况"></a>2.1  运行hello_world.py时发生的情况</h4><p>hello_world.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"Hello Python world!"</span>)</span><br></pre></td></tr></table></figure>
+<p>运行文件hello_world.py时，末尾的.py指出这是一个Python程序，因此编辑器将使用Python解释器 来运行它。</p>
+<p>Python解释器读取整个程序，确定其中每个单词的含义。例如，看到单词print时，解释器就会将括号中的内容打印到屏幕，而不会管括号中的内容是什么。</p>
+<a id="more"></a>
+
+<h4 id="2-2-变量"><a href="#2-2-变量" class="headerlink" title="2.2  变量"></a>2.2  变量</h4><p>每个变量都存储了一个值————与变量相关连的信息。(值给予的变量对应的意义)</p>
+<p>在程序中可以随时修改变量的值，Python将始终记录变量的最新值。</p>
+<h5 id="2-2-1-变量的命名和使用"><a href="#2-2-1-变量的命名和使用" class="headerlink" title="2.2.1  变量的命名和使用"></a>2.2.1  变量的命名和使用</h5><p><strong>变量的命名：</strong></p>
+<p>变量名只能包含字母、数字和下划线。变量名可以字母或下划线打头,但不能以数字打头,例如,可将变量命名为 message_1 ,但不能将其命名为 1_message 。</p>
+<p>变量名不能包含空格,但可使用下划线来分隔其中的单词。例如,变量名 greeting_message 可行,但变量名 greeting message 会引发错误。</p>
+<p>不要将Python关键字和函数名用作变量名,即不要使用 Python 保留用于特殊用途的单词,如print。</p>
+<p>变量名应既简短又具有描述性。例如, name 比 n 好, student_name 比 s_n 好, name_length 比 length_of_persons_name 好。</p>
+<p>慎用小写字母l和大写字母O,因为它们可能被人错看成数字1和0。</p>
+<p><strong>注意</strong>：就目前而言，应使用小写的Python变量名。在变量名中使用大写字母虽然不会导致错误，但避免使用大写字母是个不错的主意。（后面的类会有对应的大写命名就可以避免错误。）</p>
+<h5 id="2-2-2-使用变量时避免命名错误"><a href="#2-2-2-使用变量时避免命名错误" class="headerlink" title="2.2.2  使用变量时避免命名错误"></a>2.2.2  使用变量时避免命名错误</h5><p>程序存在错误时，Python解释器将竭尽所能地帮助你找出问题所在。程序无法成功地运行时，解释器会提供一个traceback。traceback是一条记录，指出了解释器尝试运行代码时，在什么地方陷入了困境。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">message = <span class="string">"Hello Python Crash Course reader!"</span></span><br><span class="line">print(mesage)</span><br><span class="line"></span><br><span class="line">&gt;</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"hello_world.py"</span>, line <span class="number">2</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    print(mesage)</span><br><span class="line">NameError: name <span class="string">'mesage'</span> <span class="keyword">is</span> <span class="keyword">not</span> defined</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-3-字符串"><a href="#2-3-字符串" class="headerlink" title="2.3  字符串"></a>2.3  字符串</h4><p><strong>字符串</strong>–就是一系列字符，用引号括起来的都是字符串。其中的引号可以是单引号，也可以是双引号。</p>
+<h5 id="2-3-1-使用方法修改字符串的大小写"><a href="#2-3-1-使用方法修改字符串的大小写" class="headerlink" title="2.3.1  使用方法修改字符串的大小写"></a>2.3.1  使用方法修改字符串的大小写</h5><p>title()以首字母大写的方式显示每个单词，即将每个单词的首字母都改为大写。</p>
+<p>无论对应的元素是全部大写，还是大小写都有，都改为首字母大写。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">"yan xin"</span></span><br><span class="line">print(name.title())</span><br><span class="line"></span><br><span class="line">&gt;</span><br><span class="line">Yan Xin</span><br></pre></td></tr></table></figure>
+
+<p><strong>方法</strong> 是Python可对数据执行的操作。<br>在 name.title() 中，name后面的句点( . )让Python对变量name执行方法 title() 指定的操作。<br>每个方法后面都跟着一对括号,这是因为方法通常需要额外的信息来完成其工作。</p>
+<p>要将字符串改为全部大写或全部小写：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">upper()</span><br><span class="line">lower()</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-3-2-合并（拼接）字符串"><a href="#2-3-2-合并（拼接）字符串" class="headerlink" title="2.3.2  合并（拼接）字符串"></a>2.3.2  合并（拼接）字符串</h5><p>通过加号连接两个不同的变量称为合并(拼接)字符串。</p>
+<p>Python使用加号来合并字符串。<br>这种合并字符串的方法称为<strong>拼接</strong>。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">first_name = <span class="string">'yan'</span></span><br><span class="line">last_name = <span class="string">'xin'</span></span><br><span class="line">full_name = first_name + <span class="string">' '</span> + last_name</span><br><span class="line"></span><br><span class="line">&gt;</span><br><span class="line">yan xin</span><br></pre></td></tr></table></figure>
+<p>可以使用拼接来创建消息</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">message = <span class="string">'hello '</span> + full_name</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-3-3-使用制表符或换行符来添加空白"><a href="#2-3-3-使用制表符或换行符来添加空白" class="headerlink" title="2.3.3  使用制表符或换行符来添加空白"></a>2.3.3  使用制表符或换行符来添加空白</h5><p>制表符与换行符：</p>
+<p>编程中，<strong>空白</strong>泛指任何非打印字符，如空格、制表符、换行符。</p>
+<p>制表符(\t)—-换行符(\n)</p>
+<h5 id="2-3-4-删除空白"><a href="#2-3-4-删除空白" class="headerlink" title="2.3.4  删除空白"></a>2.3.4  删除空白</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">“python” ≠ “python ”</span><br><span class="line"><span class="comment">#该两个字符串不相等。</span></span><br></pre></td></tr></table></figure>
+<p>rstrip() 删除字符串末尾空白。（是“字符串”末尾的空白-必须为同一个变量，包括换行、指标与空格。如果只有单元素的换行与指标将无效，就比如爬取小说时的空行。）</p>
+<p>对于print(message.rstrip())只是对message一次性操作，再次输出message时不变。</p>
+<p>如果需要永久改变需要把改变的操作存到变量中：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">message = message.restrip()</span><br></pre></td></tr></table></figure>
+<p>lstrip()删除字符串前端空白，strip()删除两端空白(不能够删除中间的空白)。</p>
+<h5 id="2-3-5-使用字符串时避免语法错误"><a href="#2-3-5-使用字符串时避免语法错误" class="headerlink" title="2.3.5  使用字符串时避免语法错误"></a>2.3.5  使用字符串时避免语法错误</h5><p><strong>语法错误(invalid syntax)</strong>：程序中包含非法的Python代码时，就会导致语法错误。</p>
+<p>引号之间的语法错误：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">message = <span class="string">'One of Python'</span>s strengths <span class="keyword">is</span> its diverse community.<span class="string">'</span></span><br><span class="line"><span class="string">print(message)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&gt;</span></span><br><span class="line"><span class="string">  File "apostrophe.py", line 1</span></span><br><span class="line"><span class="string">    message = '</span>One of Python<span class="string">'s strengths is its diverse community.'</span></span><br><span class="line">SyntaxError: invalid syntax</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-4-数字"><a href="#2-4-数字" class="headerlink" title="2.4  数字"></a>2.4  数字</h4><h5 id="2-4-1-整数"><a href="#2-4-1-整数" class="headerlink" title="2.4.1  整数"></a>2.4.1  整数</h5><p>在Python中，可对整数执行加（ + ）减（ - ）乘（ * ）除（ / ）运算。</p>
+<p>两个乘号（ ** ）表示乘方运算，同时支持运算次序(如有括号先算括号里面的)。</p>
+<h5 id="2-4-2-浮点数"><a href="#2-4-2-浮点数" class="headerlink" title="2.4.2  浮点数"></a>2.4.2  浮点数</h5><p><strong>浮点数</strong>：Python将带小数点的字数都称为浮点数。</p>
+<p>注意：结果包含的小位数可能是不确定的。后面有可能还多出对应的数字。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="number">0.2</span> + <span class="number">0.1</span>)</span><br><span class="line">print(<span class="number">3</span> * <span class="number">0.1</span>)</span><br><span class="line"></span><br><span class="line">&gt;</span><br><span class="line"><span class="number">0.30000000000000004</span></span><br><span class="line"><span class="number">0.30000000000000004</span></span><br></pre></td></tr></table></figure>
+<h5 id="2-4-3-使用函数-str-避免类型错误"><a href="#2-4-3-使用函数-str-避免类型错误" class="headerlink" title="2.4.3  使用函数 str() 避免类型错误"></a>2.4.3  使用函数 str() 避免类型错误</h5><p>这是一个<strong>类型错误</strong>，意味着Python无法识别你使用的信息。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">23</span></span><br><span class="line">message = <span class="string">"Happy "</span> + age + <span class="string">"rd Birthday!"</span></span><br><span class="line"></span><br><span class="line">print(message)</span><br><span class="line"></span><br><span class="line">&gt;</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"birthday.py"</span>, line <span class="number">2</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    message = <span class="string">"Happy "</span> + age + <span class="string">"rd Birthday!"</span></span><br><span class="line">TypeError: Can<span class="string">'t convert '</span>int<span class="string">' object to str implicitly</span></span><br></pre></td></tr></table></figure>
+<p>在这个示例中，Python发现你使用了一个值为整数（int）的变量，但它不知道该如何解读这个值。Python知道，这个变量表示的可能是数值23，也可能是字符2和3。像上面这样在字符串中使用整数时，需要显式地指出你希望Python将这个整数用作字符串。为此，可调用函数 str() ，它让Python将非字符串值表示为字符串。</p>
+<p>当变量为数字时，加入对应的字符串中会出现类型错误，Python无法识别你使用的数字信息。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">23</span></span><br></pre></td></tr></table></figure>
+<p>该表示的值为非字符串；值调用函数str()，可以将非字符串值表示为字符串。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">message = <span class="string">"Happy "</span> + str(age) + <span class="string">"rd Birthday!"</span></span><br></pre></td></tr></table></figure>
+
+<p>或者直接将数字锁死为字符串：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="string">"23"</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-5-注释"><a href="#2-5-注释" class="headerlink" title="2.5  注释"></a>2.5  注释</h4><h5 id="2-5-1-如何编写注释"><a href="#2-5-1-如何编写注释" class="headerlink" title="2.5.1  如何编写注释"></a>2.5.1  如何编写注释</h5><p>在Python中，注释用井号（ # ）标识。</p>
+<p>井号后面的内容都会被Python解释器忽略</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#2020/3/24</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="2-5-2-该编写什么样的注释"><a href="#2-5-2-该编写什么样的注释" class="headerlink" title="2.5.2  该编写什么样的注释"></a>2.5.2  该编写什么样的注释</h5><p>在开发项目期间，你对各个部分如何协同工作了如指掌，但过段时间后，有些细节你可能不记得了。</p>
+<p>同事之间的合作，可以不需要问通过注释就知道你代码的意思。</p>
+<h4 id="2-6-Python之禅"><a href="#2-6-Python之禅" class="headerlink" title="2.6  Python之禅"></a>2.6  Python之禅</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">The Zen of Python, by Tim Peters</span><br><span class="line"></span><br><span class="line">Beautiful is better than ugly.</span><br><span class="line">Explicit is better than implicit.</span><br><span class="line">Simple is better than complex.</span><br><span class="line">Complex is better than complicated.</span><br><span class="line">Flat is better than nested.</span><br><span class="line">Sparse is better than dense.</span><br><span class="line">Readability counts.</span><br><span class="line">Special cases aren&#39;t special enough to break the rules.</span><br><span class="line">Although practicality beats purity.</span><br><span class="line">Errors should never pass silently.</span><br><span class="line">Unless explicitly silenced.</span><br><span class="line">In the face of ambiguity, refuse the temptation to guess.</span><br><span class="line">There should be one-- and preferably only one --obvious way to do it.</span><br><span class="line">Although that way may not be obvious at first unless you&#39;re Dutch.</span><br><span class="line">Now is better than never.</span><br><span class="line">Although never is often better than *right* now.</span><br><span class="line">If the implementation is hard to explain, it&#39;s a bad idea.</span><br><span class="line">If the implementation is easy to explain, it may be a good idea.</span><br><span class="line">Namespaces are one honking great idea -- let&#39;s do more of those!</span><br></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -171,19 +269,97 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/06/28/%E7%AC%AC2%E7%AB%A0-%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
+
   
 
-    
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+
+  
+
+  
+
+  
+
 
 
           </div>
@@ -206,8 +382,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
