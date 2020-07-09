@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 颜鑫的技术之旅</title>
+  <title>Java 基础知识--类、超类和子类 | 颜鑫的技术之旅</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="颜鑫的技术之旅">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="假设你在某个公司工作，这个公司中经理的待遇与普通雇员的待遇存在着一些差异。不过， 他们之间也存在着很多相同的地方，例如， 他们都领取薪水。只是普通雇员在完成本职任务之后仅领取薪水， 而经理在完成了预期的业绩之后还能得到奖金。这种情形就需要使用继承。 这是因为需要为经理定义一个新类 Manager, 以便增加一些新功能。（如果重新创建一个新的经理类的话那么就会出现很多重复的代码，造成代码冗余）可以重">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java 基础知识--类、超类和子类">
+<meta property="og:url" content="http://yoursite.com/2020/07/09/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E7%B1%BB%E3%80%81%E8%B6%85%E7%B1%BB%E5%92%8C%E5%AD%90%E7%B1%BB/index.html">
 <meta property="og:site_name" content="颜鑫的技术之旅">
+<meta property="og:description" content="假设你在某个公司工作，这个公司中经理的待遇与普通雇员的待遇存在着一些差异。不过， 他们之间也存在着很多相同的地方，例如， 他们都领取薪水。只是普通雇员在完成本职任务之后仅领取薪水， 而经理在完成了预期的业绩之后还能得到奖金。这种情形就需要使用继承。 这是因为需要为经理定义一个新类 Manager, 以便增加一些新功能。（如果重新创建一个新的经理类的话那么就会出现很多重复的代码，造成代码冗余）可以重">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-07-09T08:12:37.000Z">
+<meta property="article:modified_time" content="2020-07-09T08:13:35.360Z">
 <meta property="article:author" content="颜鑫">
+<meta property="article:tag" content="Java基础">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="颜鑫的技术之旅" type="application/atom+xml">
@@ -134,36 +139,208 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Java-基础知识-类、超类和子类" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Java 基础知识--类、超类和子类
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/09/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E7%B1%BB%E3%80%81%E8%B6%85%E7%B1%BB%E5%92%8C%E5%AD%90%E7%B1%BB/" class="archive-article-date">
+
+        
+        <a href="/2020/07/09/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E7%B1%BB%E3%80%81%E8%B6%85%E7%B1%BB%E5%92%8C%E5%AD%90%E7%B1%BB/" class="archive-article-date">
   	<time datetime="2020-07-09T08:12:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-09</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/09/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E7%B1%BB%E3%80%81%E8%B6%85%E7%B1%BB%E5%92%8C%E5%AD%90%E7%B1%BB/">Java 基础知识--类、超类和子类</a>
-    </h1>
-  
+        
+      </header>
+    
+	<div align="center" class="post-count">
+		字数：5.6k字 | 预计阅读时长：22分钟
+	</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>假设你在某个公司工作，这个公司中经理的待遇与普通雇员的待遇存在着一些差异。不过， 他们之间也存在着很多相同的地方，例如， 他们都领取薪水。只是普通雇员在完成本职任务之后仅领取薪水， 而经理在完成了预期的业绩之后还能得到奖金。这种情形就需要使用继承。</p>
+<p>这是因为需要为经理定义一个新类 Manager, 以便增加一些新功能。（如果重新创建一个新的经理类的话那么就会出现很多重复的代码，造成代码冗余）可以重用 Employee 类中已经编写的部分代码， 并将其中的所有域保留下来。从理论上讲， 在 Manager 与 Employee 之间存在着明显的 “ is a”（是）关系，每个经理都是一名雇员：“ is-a” 关系是继承的一个明显特征。</p>
+<a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Employee</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> salary;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">()</span></span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String name, <span class="keyword">int</span> age, <span class="keyword">double</span> salary)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">        <span class="keyword">this</span>.salary = salary;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setSalary</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.salary = salary;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getSalary</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> salary;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">message</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"姓名："</span> + name + <span class="string">" 年龄："</span> + age + <span class="string">" 工资："</span> + salary;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Manger</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> salary;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> bonus;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Manger</span><span class="params">()</span></span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Manger</span><span class="params">(String name, <span class="keyword">int</span> age, <span class="keyword">double</span> salary, <span class="keyword">double</span> bonus)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">        <span class="keyword">this</span>.salary = salary;</span><br><span class="line">        <span class="keyword">this</span>.bonus = bonus;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setSalary</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.salary = salary;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getSalary</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> salary;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getBonus</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> bonus;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setBonus</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.bonus = bonus;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">message</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"姓名："</span> + name + <span class="string">" 年龄："</span> + age + <span class="string">" 工资："</span> + salary;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">reward</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"完成考核目标得奖金"</span> + bonus;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Manger</span> <span class="keyword">extends</span> <span class="title">Employee</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> bonus;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Manger</span><span class="params">()</span></span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Manger</span><span class="params">(String name, <span class="keyword">int</span> age, <span class="keyword">double</span> salary, <span class="keyword">double</span> bonus)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(name, age, salary);</span><br><span class="line">        <span class="keyword">this</span>.bonus = bonus;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getBonus</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> bonus;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setBonus</span><span class="params">(<span class="keyword">double</span> bonus)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.bonus = bonus;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">message</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">super</span>.message() + <span class="string">" 奖金："</span> + bonus;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="1-定义子类"><a href="#1-定义子类" class="headerlink" title="1.    定义子类"></a>1.    定义子类</h2><p>下面是由继承 Employee 类来定义 Manager 类的格式， 关键字 extends 表示继承。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Manger</span> <span class="keyword">extends</span> <span class="title">Employee</span></span>&#123;</span><br><span class="line">    <span class="comment">//添加特有的属性和方法</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>关键字 extends 表明正在构造的新类派生于一个已存在的类。 已存在的类称为超类（ superclass ）、 基类（ base class ）或父类（ parent class ）; 新类称为子类（ subclass ）、 派生类（ derived class ）或孩子类（ child class ）。</p>
+<p>尽管 Employee 类是一个超类，但并不是因为它优于子类或者拥有比子类更多的功能。 实际上恰恰相反，子类比超类拥有的功能多。</p>
+<p>在 Manager 类中，增加了一个用于存储奖金信息的字段，以及一个用于设置这个域的新方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Manger</span> <span class="keyword">extends</span> <span class="title">Employee</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> bonus;</span><br><span class="line">    ......</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">reward</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"完成考核目标得奖金"</span> + bonus;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果有一个 Manager 对象， 就可以使用 reward 方法。</p>
+<p>当然， 由于 reward 方法不是在 Employee 类中定义的，所以属于 Employee 类的对象不能使用它。</p>
+<p>然而， 尽管在 Manager 类中没有显式地定义 getName 和 getHireDay 等方法， 但属于 Manager 类的对象却可以使用它们，这是因为 Manager 类自动地继承了超类 Employee 中的这些方法。 </p>
+<p>同样， 从超类中还继承了 name、 salary 和 hireDay 这 3 个字段。这样一来， 每个 Manager 类对象就包含了 4 个字段：name、 salary、hireDay 和 bonus。</p>
+<p>在通过扩展超类定义子类的时候，仅需要指出子类与超类的不同之处。因此在设计类的时候，应该将通用的方法放在超类中， 而将具有特殊用途的方法放在子类中，这种将通用的功能放到超类的做法，在面向对象程序设计中十分普遍。</p>
+<hr>
+<p><strong>注意</strong>：<br>①不能为了简化代码，获取某功能而继承，若要继承两个类之间要有一定的所属关系：is a<br>②Java 只支持单继承，不支持多继承（一个父类可以有多个子类，但是一个子类只能有一个父类）<br>③Java 支持多层继承（儿子也可以有儿子）</p>
+<hr>
+<h2 id="2-覆盖方法"><a href="#2-覆盖方法" class="headerlink" title="2.    覆盖方法"></a>2.    覆盖方法</h2><p>然而， 超类中的有些方法对子类 Manager 并不一定适用。比如：我想去掉额外的 reward 方法把奖金和基本工资加起来作为工资输出。为此，需要提供一个新的方法来覆盖（ override ）超类中的这个方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Manger</span> <span class="keyword">extends</span> <span class="title">Employee</span></span>&#123;</span><br><span class="line">    ......</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">message</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"姓名："</span> + name + <span class="string">" 年龄："</span> + age + <span class="string">" 工资："</span> + (salary + bonus);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">Error:java: name 在 Employee 中是 private 访问控制</span></span><br><span class="line"><span class="comment">Error:java: age 在 Employee 中是 private 访问控制</span></span><br><span class="line"><span class="comment">Error:java: salary 在 Employee 中是 private 访问控制</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<p>这样做显示有错误。因为只有 Employee 方法能够直接访问 Employee  类的私有字段。也就是说，尽管每个 Manager 对象都拥有一个名为 salary 等字段， 但在 Manager 类中并不能够直接地访问 salary 字段。如果 Manager 类的方法一定要访问私有字段， 就必须像其他方法一样使用公有的接口， Employee 类中的公有方法 getSalary 等正是这样一个接口。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">message</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"姓名："</span> + getName() + <span class="string">" 年龄："</span> + getAge() + <span class="string">" 工资："</span> + (getSalary() + bonus);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>此时如果想改成这样的话：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">message</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"姓名："</span> + getName() + <span class="string">" 年龄："</span> + getAge() + <span class="string">" 工资："</span> + getSalary() + <span class="string">" 奖金："</span> + bonus;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>此时你可以使用特定的关键字 super 解决这个问题：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">message</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">super</span>.message() + <span class="string">" 奖金："</span> + bonus;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个语句调用的是 Employee 类中的 message 方法。</p>
+<p>正像前面所看到的那样， 在子类中可以增加字段、增加方法或覆盖超类的方法，然而绝对不会删除继承的任何域和方法。</p>
+<hr>
+<p><strong>注意</strong>：<br>方法重写前提：要有继承关系<br>①方法名与参数列表必须相同<br>②子类重写方法的访问控制修饰符不能小于父类被重写方法的访问控制修饰符<br>③子类重写方法的返回值类型可以是父类被重写方法返回值类型的子类<br>（通常应用时，使方法签名一模一样）</p>
+<hr>
+<h2 id="3-子类构造器"><a href="#3-子类构造器" class="headerlink" title="3.    子类构造器"></a>3.    子类构造器</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">Manger</span><span class="params">(String name, <span class="keyword">int</span> age, <span class="keyword">double</span> salary, <span class="keyword">double</span> bonus)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">super</span>(name, age, salary);</span><br><span class="line">	<span class="keyword">this</span>.bonus = bonus;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里的关键字 super 具有不同的含义。语句</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">super</span>(name, age, salary);</span><br></pre></td></tr></table></figure>
+
+<p>是“ 调用超类 Employee 中含有 name、age 和 salary 参数的构造器” 的简写形式。</p>
+<p>由于 Manager 类的构造器不能访问 Employee 类的私有字段， 所以必须通过一个构造器来初始话这些私有字段。可以利用特殊的 super 语法调用这个构造器。使用 super 调用构造器的语句必须是子类构造器的第一条语句。</p>
+<p>如果子类的构造器没有显式地调用超类的构造器， 将自动地调用超类默认的无参构造器。 如果超类没有无参构造器， 并且在子类的构造器中又没有显式地调用超类的其他构造器，则 Java 编译器将报告错误。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//超类没有无参构造器时</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">Manger</span><span class="params">(String name, <span class="keyword">int</span> age, <span class="keyword">double</span> salary, <span class="keyword">double</span> bonus)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//super(name, age, salary);</span></span><br><span class="line">	<span class="keyword">this</span>.bonus = bonus;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">Error:(58, 70) java: 无法将类 Employee中的构造器 Employee应用到给定类型;</span></span><br><span class="line"><span class="comment">  需要: java.lang.String,int,double</span></span><br><span class="line"><span class="comment">  找到: 没有参数</span></span><br><span class="line"><span class="comment">  原因: 实际参数列表和形式参数列表长度不同</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//超类有无参构造器时，上面的输出为</span></span><br><span class="line"><span class="comment">//--&gt;姓名：null 年龄：0 工资：0.0 奖金：2000.0</span></span><br></pre></td></tr></table></figure>
+
+<p>super() 目的：当子类继承父类后，继承了父类中所有的属性和方法，因此子类需要知道父类是如何为对象进行初始化。</p>
+<hr>
+<p><strong>注释</strong>：关键字 this 有两个用途： 一是引用隐式参数，二是调用该类其他的构造器 ， 同样，super 关键字也有两个用途：一是调用超类的方法，二是调用超类的构造器。 在调用构造器的时候，这两个关键字的使用方式很相似。调用构造器的语句只能作为另一个构造器的第一条语句出现。构造参数既可以传递给本类（ this ）的其他构造器，也可以传递给超类（ super ）的构造器。</p>
+<hr>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">Manger</span><span class="params">(String name, <span class="keyword">int</span> age, <span class="keyword">double</span> salary)</span></span>&#123;</span><br><span class="line">    <span class="keyword">super</span>(name, age, salary);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">Manger</span><span class="params">(String name, <span class="keyword">int</span> age, <span class="keyword">double</span> salary, <span class="keyword">double</span> bonus)</span></span>&#123;</span><br><span class="line">    <span class="keyword">this</span>(name, age, salary);</span><br><span class="line">    <span class="comment">//如果此处还有一个super发方法将会产生错误。两个super类调用就会产生错误。</span></span><br><span class="line">	<span class="keyword">this</span>.bonus = bonus;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="4-继承层次"><a href="#4-继承层次" class="headerlink" title="4.    继承层次"></a>4.    继承层次</h2><p>继承并不仅限于一个层次。例如， 可以由 Manager 类派生 Executive 类。由一个公共超类派生出来的所有类的集合被称为继承层次（ inheritance hierarchy )。在继承层次中， 从某个特定的类到其祖先的路径被称为该类的继承链 ( inheritance chain )。</p>
+<p>通常，一个祖先类可以拥有多个子孙继承链。 例如，可以由 Employee 类派生出子类 Programmer 或 Secretary， 它 们与 Manager 类没有任何关系（它们彼此之间也没有任何关系）。必要的话，可以将这个过程一直延续下去。</p>
+<p>Java 只支持单继承，不支持多继承</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Employee1</span></span>&#123;</span><br><span class="line">    ......</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>;</span><br><span class="line">	......</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Employee2</span></span>&#123;</span><br><span class="line">    ......</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>;</span><br><span class="line">	......</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Manger</span> <span class="title">extemds</span> <span class="title">Employee1</span>,<span class="title">Employee2</span></span>&#123;</span><br><span class="line">    <span class="comment">//报错：Class cannot extend multiple classes</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="5-多态"><a href="#5-多态" class="headerlink" title="5.    多态"></a>5.    多态</h2><p>下面定义一个包含三个员工的数组，且在数组中混合填入经理和员工，同时输出每个人的信息：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Employee[] ep = <span class="keyword">new</span> Employee[<span class="number">3</span>];<span class="comment">//多态</span></span><br><span class="line">ep[<span class="number">0</span>] = <span class="keyword">new</span> Manger(<span class="string">"张三"</span>, <span class="number">22</span>, <span class="number">6000</span>, <span class="number">2000</span>);</span><br><span class="line">ep[<span class="number">1</span>] = <span class="keyword">new</span> Employee(<span class="string">"李四"</span>, <span class="number">20</span>, <span class="number">5000</span>);</span><br><span class="line">ep[<span class="number">2</span>] = <span class="keyword">new</span> Manger(<span class="string">"王五"</span>, <span class="number">22</span>, <span class="number">8000</span>, <span class="number">2000</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (Employee e : ep) &#123;</span><br><span class="line">	System.out.println(e.message());<span class="comment">//动态绑定</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="comment">姓名：张三 年龄：22 工资：6000.0 奖金：2000.0</span></span><br><span class="line"><span class="comment">姓名：李四 年龄：20 工资：5000.0</span></span><br><span class="line"><span class="comment">姓名：王五 年龄：22 工资：8000.0 奖金：2000.0</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<p>这里 ep[1] 输出了基本薪水，因为它是 Employee 对象，其他的为 Manger 对象，所以输出附带了奖金。</p>
+<p>调用方法：employee.message()</p>
+<p>能够选出应该执行的正确 getSalary 方法。请注意，尽管这里将 e 声明为 Employee 类型， 但实际上 e 既可以引用 Employee 类型的对象，也可以引用 Manager 类型的对象。</p>
+<p>当 e 引用 Employee 对象时， e.message() 调用的是 Employee 类中的 message() 方法；当 e 引用 Manager 对象时，e.message() 调用的是 Manager 类中的 message() 方法。虚拟机知道 e 实际引用的对象类型，因此能够正确地调用相应的方法。</p>
+<p>一个对象变量（例如， 变量 e ) 可以指示多种实际类型的现象被称为<strong>多态</strong>（ polymorphism ）。 在运行时能够自动地选择调用哪个方法的现象称为动态绑定（ dynamic binding ）。</p>
+<p>有一个用来判断是否应该设计为继承关系的简单规则， 这就是“ is-a” 规则， 它表明子类的每个对象也是超类的对象。 例如， 每个经理都是雇员，因此，将 Manager 类设计为 Employee 类的子类是显而易见的，反之不然， 并不是每一名雇员都是经理。</p>
+<p>“ is-a ” 规则的另一种表述法是替换原则（ substitution principle ）。它表明程序中出现超类对象的任何地方都可以用子类对象替换。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Employee e;</span><br><span class="line">e = <span class="keyword">new</span> Employee(....);</span><br><span class="line">e = <span class="keyword">new</span> Manger(....);</span><br></pre></td></tr></table></figure>
+
+<p>在 Java 程序设计语言中，对象变量是多态的。一个 Employee 变量既可以引用一个 Employee 类对象， 也可以引用一个 Employee 类的任何一个子类的对象。</p>
+<p>在上面的实例中：ep[0] 引用的是 Manger 对象。但编译器只将 ep[0] 看成是一个 Employee 对象。如果此时 Manger 对象新增一个查岗任务。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">inspect</span><span class="params">()</span></span>&#123;</span><br><span class="line">    System.out.println(<span class="string">"每小时查一次岗"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">如果此时调用 ep[1].inspect()</span></span><br><span class="line"><span class="comment">Error:(13, 14) java: 找不到符号</span></span><br><span class="line"><span class="comment">  符号:   方法 inspect()</span></span><br><span class="line"><span class="comment">  位置: 类 Employee</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="6-理解方法调用"><a href="#6-理解方法调用" class="headerlink" title="6.    理解方法调用"></a>6.    理解方法调用</h2><p>准确地理解如何在对象上应用方法调用非常重要。下面假设要调用 x.f(args)，隐式参数 x 声明为类 C 的一个对象。下面是调用过程的详细描述：</p>
+<p>1、编译器査看对象的声明类型和方法名。需要注意的是：有可能存在多个名字为 f 但参数类型不一样的方法。例如，可 能存在方法 f(int) 和方法 f(String)。 编译器将会一一列举所有 C 类中名为 f 的方法和其超类中访问属性为 public 且名为 f 的方法（超类的私有方法不可访问）。<br>至此， 编译器已获得所有可能被调用的候选方法。</p>
+<p>2、接下来，编译器将确定调用方法时提供的参数类型。如果在所有名为 f 的方法中存在一个与所提供参数类型完全匹配的方法，就选择这个方法。这个过程被称为重栽解析（ overloading resolution )。<br>例如：对于调用 x.f(“ Hello”) 来说， 编译器将会挑选 f(String) ， 而不是 f(int) 。由于允许类型转换（ int 可以转换成 double, Manager 可以转换成 Employee, 等等)， 所以这 个过程可能很复杂。如果编译器没有找到与参数类型匹配的方法， 或者发现经过类型转换后有多个方法与之匹配，就会报告一个错误。<br>至此， 编译器已获得需要调用的方法名字和参数类型。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestFile</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        C c1 = <span class="keyword">new</span> C();</span><br><span class="line">        c1.f(<span class="string">"sdf"</span>);<span class="comment">//--&gt;sdf，动态绑定</span></span><br><span class="line">        c1.f(<span class="number">12</span>);<span class="comment">//--&gt;13</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">(String args)</span></span>&#123;</span><br><span class="line">        System.out.println(args);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> args)</span></span>&#123;</span><br><span class="line">        System.out.println(args += <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3、如果是 private 方法、 static 方法、 final 方法或者构造器，那么编译器将可以准确地知道应该调用哪个方法。这种调用方式称为静态绑定（ static binding )。与此对应的是，如果调用的方法依赖于隐式参数（如果此时忘记隐式参数是什么查看3.中的注释）的实际类型，那么必须在运行时实现动态绑定。在我们列举的示例中，编译器采用动态绑定的方式生成一条调用 f(String) 的指令。</p>
+<p>4、当程序运行，并且采用动态绑定调用方法时， 虚拟机一定调用与 x 所引用对象的实际类型对应的那个的方法。假设 x 的实际类型是 D，它是 C 类的子类。如果 D 类定义了方法 f(String) 就直接调用它；否则，将在 D 类的超类中寻找 f(String) 以此类推。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestFile</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        C cd = <span class="keyword">new</span> D();</span><br><span class="line">        cd.f(<span class="string">"wqe"</span>);<span class="comment">//--&gt;D:wqe</span></span><br><span class="line">        cd.f(<span class="number">13</span>);<span class="comment">//--&gt;14</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">(String args)</span></span>&#123;</span><br><span class="line">        System.out.println(args);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> args)</span></span>&#123;</span><br><span class="line">        System.out.println(args += <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span> <span class="keyword">extends</span> <span class="title">C</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">(String args)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"D:"</span> + args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>在多态的情况下：<br>编译时：“看左边”，看的是父类的引用。（父类中没有子类特有的方法）<br>运行时：“看右边”，看的是子类的对象。（实际运行的是子类重写父类的方法，如果子类没有父类的方法再去找父类。）<br>———虚拟方法调用（动态绑定）</p>
+<hr>
+<h2 id="7-强制类型转换"><a href="#7-强制类型转换" class="headerlink" title="7.    强制类型转换"></a>7.    强制类型转换</h2><p>将一个类型强制转换成另外一个类型的过程被称为类型转换。Java 程 序设计语言为强制类型转换提供了一种特殊表示法。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> x = <span class="number">3.412</span>;</span><br><span class="line"><span class="keyword">int</span> nx = (<span class="keyword">int</span>) x; <span class="comment">//舍弃了小数部分转换为了整数类型。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>引用数据类型之间的转换：<br>前提：要有继承关系<br>向上转型：子类转父类。系统自动完成。<br>向下转型：父类转子类。需要使用强转符“(需要转换的类型)”</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PolymorphismTest1</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Man man = <span class="keyword">new</span> Man(); <span class="comment">//本态调用</span></span><br><span class="line">        man.eat(); <span class="comment">//--&gt;男人吃饭狼吞虎咽</span></span><br><span class="line">        man.walk(); <span class="comment">//--&gt;男人走正步</span></span><br><span class="line">        man.smoking(); <span class="comment">//--&gt;男人爱抽烟</span></span><br><span class="line"></span><br><span class="line">        Person p = <span class="keyword">new</span> Man(); <span class="comment">//多态-向上转型</span></span><br><span class="line">        p.eat(); <span class="comment">//虚拟方法调用</span></span><br><span class="line">        p.walk();</span><br><span class="line"></span><br><span class="line">        p.smoking(); <span class="comment">//编译不通过找不到对应的方法，该方法时子类特有方法。所以需要转型</span></span><br><span class="line"></span><br><span class="line">        Man man = (Man) p; <span class="comment">//向下转型</span></span><br><span class="line">        man.smoking(); <span class="comment">//--&gt;男人爱抽烟</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person2</span><span class="params">(String name, <span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"吃饭"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">walk</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"走路"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Man</span> <span class="keyword">extends</span> <span class="title">Person</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"男人吃饭狼吞虎咽"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">walk</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"男人走正步"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">smoking</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"男人爱抽烟"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Woman</span> <span class="keyword">extends</span> <span class="title">Person</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"女人吃饭细嚼慢咽"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">walk</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"女人走猫步"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">shopping</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"女人爱购物"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>进行类型转换的唯一原因是：在暂时忽视对象的实际类型之后，使用对象的全部功能。</p>
+<p>当同级之间进行转换时：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Woman woman = (Woman) p; </span><br><span class="line"><span class="comment">//编译成功  运行报错ClassCastException。该强转为 Man 转 Woman 二者为同级类不能转换。</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">解决办法</span></span><br><span class="line"><span class="comment">在进行类型转换之前，先查看一下是否能够成功地转换。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">if (p instanceof Woman)&#123;</span></span><br><span class="line"><span class="comment">	Woman woman = (Woman) p; </span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">如果这个类型转换不可能成功，编译器就不会进行这个转换。如：</span></span><br><span class="line"><span class="comment">String c = (String) p;</span></span><br><span class="line"><span class="comment">将会产生编译错误，这是因为String不是 Person 的子类</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="8-阻止继承：final-类和方法"><a href="#8-阻止继承：final-类和方法" class="headerlink" title="8.    阻止继承：final 类和方法"></a>8.    阻止继承：final 类和方法</h2><p>有时候，可能希望阻止人们利用某个类定义子类。不允许扩展的类被称为 final 类。如果在定义类的时候使用了 final 修饰符就表明这个类是 final 类。例如，假设希望阻止人们定义 Executive 类的子类，就可以在定义这个类的时候使用 final 修饰符声明。声明格式如下所示：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">Executive</span> <span class="keyword">extends</span> <span class="title">Manager</span></span>&#123;</span><br><span class="line">    ......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>类中的特定方法也可以被声明为 final 。如果这样做，子类就不能覆盖这个方法（ final 类中的所有方法自动地成为 final 方法 。) 例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> cl ass Employee&#123;</span><br><span class="line">    ......</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">final</span> String <span class="title">getName</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    ......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>将方法或类声明为 final 主要目的是： 确保它们不会在子类中改变语义。</p>
+<h2 id="9-抽象类"><a href="#9-抽象类" class="headerlink" title="9.    抽象类"></a>9.    抽象类</h2><p>思考一个问题声明一个父类 Person ， Student 与 Employee 将继承它，那么 Person 中他们的共性需要填写什么呢？</p>
+<p>如果中间需要加一个 getDescription 方法，对一个人进行简短描述。例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">an employee with a salary of $<span class="number">50</span>,<span class="number">000.00</span></span><br><span class="line">a student majoring in computer science</span><br></pre></td></tr></table></figure>
+
+<p>在 Employee 类和 Student 类中实现这个方法很容易。 但是在 Person 类中应该提供什么内容呢？</p>
+<p>除了姓名、年龄等共性之外， Person 类一无所知。当然， 可以让 Person.getDescription() 返回一个空字符串。然而， 还有一个更好的方法， 就是使用 abstract 关键字，这样就完全不需要实现这个方法了。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> String <span class="title">getDescription</span><span class="params">()</span></span>; <span class="comment">//不需要有任何执行语句</span></span><br></pre></td></tr></table></figure>
+
+<p>为了提高程序的清晰度， 包含一个或多个抽象方法的类本身必须被声明为抽象的。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> String <span class="title">getDescription</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>除了抽象方法之外，抽象类还可以包含具体数据和具体方法。返回一个人的姓名加年龄。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">getDescription</span><span class="params">()</span></span>;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">message</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>抽象方法充当着占位方法的角色， 它们的具体实现在子类中。扩展抽象类可以有两种选择。 一种是在抽象类中定义部分抽象类方法或不定义抽象类方法，这样就必须将子类也标记为抽象类；另一种是定义全部的抽象方法，这样一来，子类就不是抽象的了。</p>
+<p>例如， 通过扩展抽象 Person 类， 并实现 getDescription 方法来定义 Student 类。由于在 Student 类中不再含有抽象方法，所以不必将这个类声明为抽象的。</p>
+<p>类即使不含抽象方法，也可以将类声明为抽象类。</p>
+<p>抽象类不能被实例化。也就是说，如果将一个类声明为 abstract，就不能创建这个类的对象。</p>
+<p>但可以定义一个抽象类的对象变量， 但是它只能引用非抽象子类的对象。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Person p = <span class="keyword">new</span> Student(<span class="string">"Vinee Vu"</span> , <span class="string">"Economics"</span>);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> <span class="keyword">extends</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">   <span class="keyword">private</span> String major;</span><br><span class="line">    </span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">()</span></span>&#123;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">(String name, String major)</span></span>&#123;</span><br><span class="line">      <span class="keyword">super</span>(name);</span><br><span class="line">      <span class="keyword">this</span>.major = major;</span><br><span class="line">   &#125;</span><br><span class="line">    </span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setMajor</span><span class="params">(String major)</span></span>&#123;</span><br><span class="line">       <span class="keyword">this</span>.major = major;</span><br><span class="line">   &#125;</span><br><span class="line">    </span><br><span class="line">   <span class="function"><span class="keyword">public</span> String <span class="title">getMajor</span><span class="params">()</span></span>&#123;</span><br><span class="line">       <span class="keyword">return</span> major;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> String <span class="title">getDescription</span><span class="params">()</span></span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="string">"a student majoring in "</span> + major;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在 Student 类中定义了 getDescription 方法。因此，在 Student 类中的全部方法都是非抽象的， 这个类不再是抽象类。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Employee</span> <span class="keyword">extends</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">double</span> salary;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String name, <span class="keyword">double</span> salary)</span></span>&#123;</span><br><span class="line">      <span class="keyword">super</span>(name);</span><br><span class="line">      <span class="keyword">this</span>.salary = salary;</span><br><span class="line">   &#125;</span><br><span class="line">    </span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setSalary</span><span class="params">(<span class="keyword">double</span> setSalary)</span></span>&#123;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getSalary</span><span class="params">()</span></span>&#123;</span><br><span class="line">      <span class="keyword">return</span> salary;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> String <span class="title">getDescription</span><span class="params">()</span></span>&#123;</span><br><span class="line">      <span class="keyword">return</span> String.format(<span class="string">"an employee with a salary of $%.2f"</span>, salary);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PersonTest</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">   </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> people = <span class="keyword">new</span> Person[<span class="number">2</span>];</span><br><span class="line"></span><br><span class="line">      people[<span class="number">0</span>] = <span class="keyword">new</span> Employee(<span class="string">"Harry Hacker"</span>, <span class="number">50000</span>);</span><br><span class="line">      people[<span class="number">1</span>] = <span class="keyword">new</span> Student(<span class="string">"Maria Morris"</span>, <span class="string">"computer science"</span>);</span><br><span class="line"></span><br><span class="line">      <span class="keyword">for</span> (Person p : people)</span><br><span class="line">         System.out.println(p.getName() + <span class="string">", "</span> + p.getDescription());</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>由于不能构造抽象类 Person 的对象， 所以变量 p 永远不会引用 Person 对象， 而是引用诸如 Employee 或 Student 这样的具体子类对象， 而 这些对象中都定义了 getDescription 方法。</p>
+<h2 id="10-受保护访问"><a href="#10-受保护访问" class="headerlink" title="10.    受保护访问"></a>10.    受保护访问</h2><p>Java 用于控制可见性的 4 个访问修饰符：<br>仅对本类可见 private<br>对所有类可见 public<br>对本包和所有子类可见 protected<br>对本包可见———默认， 不需要修饰符。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -175,365 +352,107 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/09/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E7%B1%BB%E3%80%81%E8%B6%85%E7%B1%BB%E5%92%8C%E5%AD%90%E7%B1%BB/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/03/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86--%E6%95%B0%E7%BB%84/" class="archive-article-date">
-  	<time datetime="2020-07-03T14:47:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-03</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/03/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86--%E6%95%B0%E7%BB%84/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java 基础知识--数组</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/03/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86--%E6%95%B0%E7%BB%84/">Java 基础知识--数组</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Java基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/02/%E7%AC%AC2%E7%AB%A0-Java-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%8E%AF%E5%A2%83/" class="archive-article-date">
-  	<time datetime="2020-07-02T14:42:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/02/%E7%AC%AC2%E7%AB%A0-Java-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%8E%AF%E5%A2%83/">第2章  Java 程序设计环境</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Java基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/29/%E7%AC%AC1%E7%AB%A0-Java%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E6%A6%82%E5%BF%B5/" class="archive-article-date">
-  	<time datetime="2020-06-29T00:06:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/29/%E7%AC%AC1%E7%AB%A0-Java%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E6%A6%82%E5%BF%B5/">Java 基础知识--Java 程序设计概念</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Java基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/28/%E7%AC%AC11%E7%AB%A0-%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81/" class="archive-article-date">
-  	<time datetime="2020-06-28T05:47:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/28/%E7%AC%AC11%E7%AB%A0-%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81/">第11章  测试代码</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">python基础知识</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/28/%E7%AC%AC10%E7%AB%A0-%E6%96%87%E4%BB%B6%E5%92%8C%E5%BC%82%E5%B8%B8/" class="archive-article-date">
-  	<time datetime="2020-06-28T05:46:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/28/%E7%AC%AC10%E7%AB%A0-%E6%96%87%E4%BB%B6%E5%92%8C%E5%BC%82%E5%B8%B8/">第10章  文件和异常</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">python基础知识</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/28/%E7%AC%AC9%E7%AB%A0-%E7%B1%BB/" class="archive-article-date">
-  	<time datetime="2020-06-28T05:43:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/28/%E7%AC%AC9%E7%AB%A0-%E7%B1%BB/">第9章  类</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">python基础知识</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/28/%E7%AC%AC8%E7%AB%A0-%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2020-06-28T05:41:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/28/%E7%AC%AC8%E7%AB%A0-%E5%87%BD%E6%95%B0/">第8章  函数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">python基础知识</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/28/%E7%AC%AC7%E7%AB%A0-%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5%E5%92%8Cwhile%E5%BE%AA%E7%8E%AF/" class="archive-article-date">
-  	<time datetime="2020-06-28T05:40:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/28/%E7%AC%AC7%E7%AB%A0-%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5%E5%92%8Cwhile%E5%BE%AA%E7%8E%AF/">第7章  用户输入和while循环</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">python基础知识</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/28/%E7%AC%AC6%E7%AB%A0-%E5%AD%97%E5%85%B8/" class="archive-article-date">
-  	<time datetime="2020-06-28T05:37:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/28/%E7%AC%AC6%E7%AB%A0-%E5%AD%97%E5%85%B8/">第6章  字典</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">python基础知识</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &amp;raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -555,8 +474,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
