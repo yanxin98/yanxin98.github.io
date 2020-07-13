@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/7 | 颜鑫的技术之旅</title>
+  <title>第3章  列表简介 | 颜鑫的技术之旅</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="颜鑫的技术之旅">
-<meta property="og:url" content="http://yoursite.com/archives/2020/07/index.html">
+  <meta name="description" content="3.1  列表是什么列表：是由一系列按特定顺序排列的元素组成。 在Python中，用方括号（ [] ）来表示列表，并用逗号来分隔其中的元素。 12345bicycles &#x3D; [&#39;trek&#39;, &#39;cannondale&#39;, &#39;redline&#39;, &#39;specialized&#39;]print(bicycles)&gt;[&#39;tre">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第3章  列表简介">
+<meta property="og:url" content="http://yoursite.com/2020/06/28/python/%E7%AC%AC3%E7%AB%A0%20%20%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B/index.html">
 <meta property="og:site_name" content="颜鑫的技术之旅">
+<meta property="og:description" content="3.1  列表是什么列表：是由一系列按特定顺序排列的元素组成。 在Python中，用方括号（ [] ）来表示列表，并用逗号来分隔其中的元素。 12345bicycles &#x3D; [&#39;trek&#39;, &#39;cannondale&#39;, &#39;redline&#39;, &#39;specialized&#39;]print(bicycles)&gt;[&#39;tre">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-06-27T23:20:16.000Z">
+<meta property="article:modified_time" content="2020-06-28T00:55:14.036Z">
 <meta property="article:author" content="颜鑫">
+<meta property="article:tag" content="python基础知识">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="颜鑫的技术之旅" type="application/atom+xml">
@@ -134,402 +139,268 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-python/第3章  列表简介" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      第3章  列表简介
+    </h1>
+  
+
+        
+        <a href="/2020/06/28/python/%E7%AC%AC3%E7%AB%A0%20%20%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B/" class="archive-article-date">
+  	<time datetime="2020-06-27T23:20:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-28</time>
+</a>
+        
+      </header>
     
+	<div align="center" class="post-count">
+		字数：2k字 | 预计阅读时长：8分钟
+	</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="3-1-列表是什么"><a href="#3-1-列表是什么" class="headerlink" title="3.1  列表是什么"></a>3.1  列表是什么</h4><p><strong>列表</strong>：是由一系列按特定顺序排列的元素组成。</p>
+<p>在Python中，用方括号（ [] ）来表示列表，并用逗号来分隔其中的元素。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">bicycles &#x3D; [&#39;trek&#39;, &#39;cannondale&#39;, &#39;redline&#39;, &#39;specialized&#39;]</span><br><span class="line">print(bicycles)</span><br><span class="line"></span><br><span class="line">&gt;</span><br><span class="line">[&#39;trek&#39;, &#39;cannondale&#39;, &#39;redline&#39;, &#39;specialized&#39;]</span><br></pre></td></tr></table></figure>
+<p>如果你让Python将列表打印出来，Python将打印列表的内部表示，包括方括号。</p>
+<a id="more"></a>
+
+<h5 id="3-1-1-访问列表元素"><a href="#3-1-1-访问列表元素" class="headerlink" title="3.1.1  访问列表元素"></a>3.1.1  访问列表元素</h5><p>列表是有序集合，因此要访问列表的任何元素，只需将该元素的位置或索引告诉Python即可。</p>
+<p>要访问列表元素，可指出列表的名称，再指出元素的索引，并将其放在方括号内。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">bicycles &#x3D; [&#39;trek&#39;, &#39;cannondale&#39;, &#39;redline&#39;, &#39;specialized&#39;]</span><br><span class="line">print(bicycle[0])</span><br><span class="line"></span><br><span class="line">&gt;</span><br><span class="line">trek</span><br></pre></td></tr></table></figure>
+<p>同时可以更具需要再调用对应的方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(bicycle[0].title())</span><br></pre></td></tr></table></figure>
+
+<h6 id="猜想：数字列表"><a href="#猜想：数字列表" class="headerlink" title="猜想：数字列表"></a>猜想：数字列表</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">number &#x3D; [&#39;23&#39;, &#39;54&#39;, &#39;43&#39;, &#39;64&#39;]</span><br><span class="line"></span><br><span class="line">#调用对应位置的元素</span><br><span class="line">print(number[0])</span><br><span class="line">#将对应位置的元素放入变量中。</span><br><span class="line">message &#x3D; &#39;I am &#39; + number[0] + &#39;years old.&#39;</span><br><span class="line">print(message)</span><br><span class="line"></span><br><span class="line">&gt;</span><br><span class="line">23</span><br><span class="line">I am 23years old.</span><br></pre></td></tr></table></figure>
+<p>检验结果：<br>①正常输出<br>②列表中的元素默认为字符串</p>
+<h5 id="3-1-2-索引从0而不是1开始"><a href="#3-1-2-索引从0而不是1开始" class="headerlink" title="3.1.2  索引从0而不是1开始"></a>3.1.2  索引从0而不是1开始</h5><p>在Python中，第一个列表元素的索引为0，而不是1。</p>
+<p>要访问列表的任何元素，都可将其位置减1，并将结果作为索引。</p>
+<p>通过将索引指定为-1，可让Python返回最后一个列表元素。</p>
+<h5 id="3-1-3-使用列表中的各个值"><a href="#3-1-3-使用列表中的各个值" class="headerlink" title="3.1.3  使用列表中的各个值"></a>3.1.3  使用列表中的各个值</h5><p>列表中的各个值，可像其他变量一样使用列表中的各个值。</p>
+<h4 id="3-2-修改、添加和删除元素"><a href="#3-2-修改、添加和删除元素" class="headerlink" title="3.2  修改、添加和删除元素"></a>3.2  修改、添加和删除元素</h4><h5 id="3-2-1-修改列表元素"><a href="#3-2-1-修改列表元素" class="headerlink" title="3.2.1  修改列表元素"></a>3.2.1  修改列表元素</h5><p>修改列表元素，可指定表名和要修改的元素的索引，再指定该元素的新值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">numbers &#x3D; [&#39;23&#39;, &#39;54&#39;, &#39;43&#39;, &#39;64&#39;]</span><br><span class="line">numbers[0] &#x3D; &#39;22&#39;</span><br><span class="line">print(numbers)</span><br><span class="line"></span><br><span class="line">&gt;</span><br><span class="line">[&#39;22&#39;, &#39;54&#39;, &#39;43&#39;, &#39;64&#39;]</span><br></pre></td></tr></table></figure>
+
+<p>如:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">numbers &#x3D; [&#39;23&#39;, &#39;54&#39;, &#39;43&#39;, &#39;64&#39;]</span><br><span class="line">numbers[&#39;23&#39;] &#x3D; &#39;22&#39;</span><br><span class="line"></span><br><span class="line">&gt;</span><br><span class="line">TypeError: list indices must be integers or slices, not str</span><br></pre></td></tr></table></figure>
+<p>类型错误:列表索引必须是整数或片，而不是str。</p>
+<h5 id="3-2-2-在列表中添加元素"><a href="#3-2-2-在列表中添加元素" class="headerlink" title="3.2.2  在列表中添加元素"></a>3.2.2  在列表中添加元素</h5><p>1.在列表末尾添加元素</p>
+<p>方法append()将元素添加到对应变量中的末尾。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">variate.append(&#39;element&#39;)</span><br><span class="line">#变量&#x3D;variate， 元素&#x3D;element， 值&#x3D;value</span><br></pre></td></tr></table></figure>
+
+<p>2.在列表中插入元素</p>
+<p>方法 insert() 可在列表的任何位置添加新元素，需要指定新元素的索引与值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">variate.insert(0, &#39;value&#39;)</span><br></pre></td></tr></table></figure>
+<p>在列表variate索引0的位置添加空间，并将值’value’存储到这个地方。</p>
+<h5 id="3-2-3-从列表中删除元素"><a href="#3-2-3-从列表中删除元素" class="headerlink" title="3.2.3  从列表中删除元素"></a>3.2.3  从列表中删除元素</h5><p>1.使用del语句删除元素</p>
+<p>del可删除任何位置处的列表元素，条件是知道其索引</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">del varitate[0]</span><br></pre></td></tr></table></figure>
+<p>删除列表varitate中的第一个元素<br>使用del语句将值从列表中删除后，你就无法再访问它了</p>
+<p>2.方法pop()删除元素</p>
+<p>方法pop()可删除列表末尾的元素，并让你能够接着使用它。</p>
+<p>术语弹出弹出（pop）源自这样的类比：列表就像一个栈，而删除列表末尾的元素相当于弹出栈顶元素。</p>
+<p>可以用变量pop_varitate来表示被弹出的元素，但是只是唯一一个再次使用时将会替换原来pop的元素。<br>弹出之后该元素将不在列表中，同时可以继续使用变量pop_varitate利用剔除的值。<br>该元素可以再次被访问。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">motorcycles &#x3D; [&#39;honda&#39;, &#39;yamaha&#39;, &#39;suzuki&#39;]</span><br><span class="line">print(motorcycles)</span><br><span class="line"></span><br><span class="line">popped_motorcycle &#x3D; motorcycles.pop()</span><br><span class="line">print(motorcycles)</span><br><span class="line">print(popped_motorcycle)</span><br><span class="line"></span><br><span class="line">&gt;</span><br><span class="line">[&#39;honda&#39;, &#39;yamaha&#39;, &#39;suzuki&#39;]</span><br><span class="line">[&#39;honda&#39;, &#39;yamaha&#39;]</span><br><span class="line">suzuki</span><br></pre></td></tr></table></figure>
+
+<p>3.弹出列表中任何位置处的元素</p>
+<p>使用pop()来删除列表中任何位置的元素，只需在括号中指定要删除的元素的索引即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">motorcycles &#x3D; [&#39;honda&#39;, &#39;yamaha&#39;, &#39;suzuki&#39;]</span><br><span class="line">print(motorcycles.pop(1))</span><br><span class="line"></span><br><span class="line">&gt;</span><br><span class="line">yamaha</span><br></pre></td></tr></table></figure>
+
+<p>4.根据值删除元素</p>
+<p>知道要删除元素的值，可以使用方法remove()。</p>
+<p>使用remove()从列表中删除元素时，也可以接着使用它的值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">motorcycles &#x3D; [&#39;honda&#39;, &#39;ducati&#39;, &#39;yamaha&#39;, &#39;suzuki&#39;, &#39;ducati&#39;]</span><br><span class="line">print(motorcycles)</span><br><span class="line"></span><br><span class="line">too_expensive &#x3D; &#39;ducati&#39;</span><br><span class="line">motorcycles.remove(too_expensive)</span><br><span class="line">print(motorcycles)</span><br><span class="line">print(&quot;\nA &quot; + too_expensive.title() + &quot; is too expensive for me.&quot;)</span><br><span class="line"></span><br><span class="line">&gt;</span><br><span class="line">[&#39;honda&#39;, &#39;ducati&#39;, &#39;yamaha&#39;, &#39;suzuki&#39;, &#39;ducati&#39;]</span><br><span class="line">[&#39;honda&#39;, &#39;yamaha&#39;, &#39;suzuki&#39;, &#39;ducati&#39;]</span><br><span class="line"></span><br><span class="line">A Ducati is too expensive for me.</span><br></pre></td></tr></table></figure>
+<p>方法remove()只删除第一个指定的值。</p>
+<p>猜想：<br>是否可以用remove_varitate来表示用remove删除的值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">motorcycles &#x3D; [&#39;honda&#39;, &#39;ducati&#39;, &#39;yamaha&#39;, &#39;suzuki&#39;, &#39;ducati&#39;]</span><br><span class="line">print(motorcycles)</span><br><span class="line"></span><br><span class="line">too_expensive &#x3D; motorcycles.remove(&#39;ducati&#39;)</span><br><span class="line">print(motorcycles)</span><br><span class="line">print(&quot;\nA &quot; + too_expensive.title() + &quot; is too expensive for me.&quot;)</span><br><span class="line"></span><br><span class="line">&gt;</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;newpython.py&quot;, line 1425, in &lt;module&gt;</span><br><span class="line">    print(&quot;\nA &quot; + too_expensive.title() + &quot; is too expensive for me.&quot;)</span><br><span class="line">AttributeError: &#39;NoneType&#39; object has no attribute &#39;title&#39;</span><br></pre></td></tr></table></figure>
+<p>该式不成立remove_varitate返回结果为空。</p>
+<h4 id="3-3-组织列表"><a href="#3-3-组织列表" class="headerlink" title="3.3  组织列表"></a>3.3  组织列表</h4><h5 id="3-3-1-使用方法sort-对列表进行永久性排序"><a href="#3-3-1-使用方法sort-对列表进行永久性排序" class="headerlink" title="3.3.1  使用方法sort()对列表进行永久性排序"></a>3.3.1  使用方法sort()对列表进行永久性排序</h5><p>方法 sort() 永久性地修改了列表元素的排列顺序。且再也无法恢复到原来的排列顺序。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#varitate.sort(reverse&#x3D;True)</span><br><span class="line"></span><br><span class="line">cars &#x3D; [&#39;bmw&#39;, &#39;audi&#39;, &#39;toyota&#39;, &#39;subaru&#39;]</span><br><span class="line">cars.sort()</span><br><span class="line">print(cars)</span><br><span class="line"></span><br><span class="line">&gt;</span><br><span class="line">[&#39;audi&#39;, &#39;bmw&#39;, &#39;subaru&#39;, &#39;toyota&#39;]</span><br></pre></td></tr></table></figure>
+
+<p>向sort()方法传递参数reverse=True，即可按字母顺序相反的顺序排列列表元素，同样是永久性的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">varitate.sort(reverse&#x3D;True)</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-3-2-使用函数-sorted-对列表进行临时排序"><a href="#3-3-2-使用函数-sorted-对列表进行临时排序" class="headerlink" title="3.3.2  使用函数 sorted() 对列表进行临时排序"></a>3.3.2  使用函数 sorted() 对列表进行临时排序</h5><p>函数 sorted() 能够按特定顺序显示列表元素，同时不影响它们在列表中的原始排列顺序。</p>
+<p>但是输出不能够和sort()一样调用方法后直接通过变量输出。<br>需要</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(sorted(varitate))</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cars &#x3D; [&#39;bmw&#39;, &#39;audi&#39;, &#39;toyota&#39;, &#39;subaru&#39;]</span><br><span class="line">print(cars)</span><br><span class="line">print(sorted(cars))</span><br><span class="line">print(cars)</span><br><span class="line"></span><br><span class="line">&gt;</span><br><span class="line">[&#39;bmw&#39;, &#39;audi&#39;, &#39;toyota&#39;, &#39;subaru&#39;]</span><br><span class="line">[&#39;audi&#39;, &#39;bmw&#39;, &#39;subaru&#39;, &#39;toyota&#39;]</span><br><span class="line">[&#39;bmw&#39;, &#39;audi&#39;, &#39;toyota&#39;, &#39;subaru&#39;]</span><br></pre></td></tr></table></figure>
+<p>你要按与字母顺序相反的顺序显示列表，也可向函数sorted()传递参数reverse=True。</p>
+<h6 id="猜想："><a href="#猜想：" class="headerlink" title="猜想："></a>猜想：</h6><p>当列表中有大写有小写时，将会怎么排列。</p>
+<p>结果，将会先排列大写字母，在排列小写字母。</p>
+<h5 id="3-3-3-倒着打印列表"><a href="#3-3-3-倒着打印列表" class="headerlink" title="3.3.3  倒着打印列表"></a>3.3.3  倒着打印列表</h5><p>要反转列表元素的排列顺序，可使用方法reverse()。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">varitate.reverse()</span><br></pre></td></tr></table></figure>
+<p>注意，reverse()不是指按与字母顺序相反的顺序排列列表元素，而只是反转列表元素的排列顺序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cars &#x3D; [&#39;bmw&#39;, &#39;audi&#39;, &#39;toyota&#39;, &#39;subaru&#39;]</span><br><span class="line">print(cars)</span><br><span class="line">cars.reverse()</span><br><span class="line">print(cars)</span><br><span class="line"></span><br><span class="line">&gt;</span><br><span class="line">[&#39;bmw&#39;, &#39;audi&#39;, &#39;toyota&#39;, &#39;subaru&#39;]</span><br><span class="line">[&#39;subaru&#39;, &#39;toyota&#39;, &#39;audi&#39;, &#39;bmw&#39;]</span><br></pre></td></tr></table></figure>
+<p>永久性修改列表元素的排列顺序，可再次调用恢复原有列表元素的排列顺序。</p>
+<h5 id="3-3-4-确定列表长度"><a href="#3-3-4-确定列表长度" class="headerlink" title="3.3.4  确定列表长度"></a>3.3.4  确定列表长度</h5><p>使用函数len()可快速获取列表的长度。</p>
+<p>列表包含几个元素，即长度为几。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">len(varitate)</span><br></pre></td></tr></table></figure>
+<p><strong>注意</strong>：Python计算列表元素数时从1开始，因此确定列表长度时，你应该不会遇到差一错误。</p>
+<h4 id="3-4-使用列表时避免索引错误"><a href="#3-4-使用列表时避免索引错误" class="headerlink" title="3.4  使用列表时避免索引错误"></a>3.4  使用列表时避免索引错误</h4><p>当你需要打印原本不存在的元素时将会出现索引错误。</p>
+<p>列表只有三个元素，你获取输出第四个元素，就会出现错误。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">motorcycles &#x3D; [&#39;honda&#39;, &#39;yamaha&#39;, &#39;suzuki&#39;]</span><br><span class="line">print(motorcycles[3])</span><br><span class="line"></span><br><span class="line">&gt;</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;motorcycles.py&quot;, line 3, in &lt;module&gt;</span><br><span class="line">    print(motorcycles[3])</span><br><span class="line">IndexError: list index out of range</span><br></pre></td></tr></table></figure>
+<p><strong>注意</strong>：发生索引错误却找不到解决办法时，请尝试将列表或其长度打印出来。列表可能与你以为的截然不同，在程序对其进行了动态处理时尤其如此。通过查看列表或其包含的元素数，可帮助你找出这种逻辑错误。</p>
+<p>PS：我是知识的搬运工颜同学，该知识点都由《Python编程：从入门到实践》摘录。记录下我认为重要的部分。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/13/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%9F%BA%E6%9C%AC%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%BB%93%E6%9E%84/" class="archive-article-date">
-  	<time datetime="2020-07-13T13:43:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/13/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%9F%BA%E6%9C%AC%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%BB%93%E6%9E%84/">Java 基础知识--基本程序设计结构</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Java基础</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">python基础知识</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/06/28/python/%E7%AC%AC3%E7%AB%A0%20%20%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/13/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%86%85%E9%83%A8%E7%B1%BB/" class="archive-article-date">
-  	<time datetime="2020-07-13T13:41:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-13</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/06/28/python/%E7%AC%AC2%E7%AB%A0-%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          第2章  变量和简单的数据类型
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/13/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%86%85%E9%83%A8%E7%B1%BB/">Java 基础知识--内部类</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Java 基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-列表是什么"><span class="toc-number">1.</span> <span class="toc-text">3.1  列表是什么</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-1-1-访问列表元素"><span class="toc-number">1.1.</span> <span class="toc-text">3.1.1  访问列表元素</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#猜想：数字列表"><span class="toc-number">1.1.1.</span> <span class="toc-text">猜想：数字列表</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-1-2-索引从0而不是1开始"><span class="toc-number">1.2.</span> <span class="toc-text">3.1.2  索引从0而不是1开始</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-1-3-使用列表中的各个值"><span class="toc-number">1.3.</span> <span class="toc-text">3.1.3  使用列表中的各个值</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-修改、添加和删除元素"><span class="toc-number">2.</span> <span class="toc-text">3.2  修改、添加和删除元素</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-2-1-修改列表元素"><span class="toc-number">2.1.</span> <span class="toc-text">3.2.1  修改列表元素</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-2-2-在列表中添加元素"><span class="toc-number">2.2.</span> <span class="toc-text">3.2.2  在列表中添加元素</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-2-3-从列表中删除元素"><span class="toc-number">2.3.</span> <span class="toc-text">3.2.3  从列表中删除元素</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-组织列表"><span class="toc-number">3.</span> <span class="toc-text">3.3  组织列表</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-3-1-使用方法sort-对列表进行永久性排序"><span class="toc-number">3.1.</span> <span class="toc-text">3.3.1  使用方法sort()对列表进行永久性排序</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-3-2-使用函数-sorted-对列表进行临时排序"><span class="toc-number">3.2.</span> <span class="toc-text">3.3.2  使用函数 sorted() 对列表进行临时排序</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#猜想："><span class="toc-number">3.2.1.</span> <span class="toc-text">猜想：</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-3-3-倒着打印列表"><span class="toc-number">3.3.</span> <span class="toc-text">3.3.3  倒着打印列表</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-3-4-确定列表长度"><span class="toc-number">3.4.</span> <span class="toc-text">3.3.4  确定列表长度</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-4-使用列表时避免索引错误"><span class="toc-number">4.</span> <span class="toc-text">3.4  使用列表时避免索引错误</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/13/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E6%9E%9A%E4%B8%BE%E7%B1%BB/" class="archive-article-date">
-  	<time datetime="2020-07-13T13:41:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-13</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/13/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E6%9E%9A%E4%B8%BE%E7%B1%BB/">Java 基础知识--枚举类</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Java 基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/13/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E6%8E%A7%E5%88%B6%E6%B5%81%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2020-07-13T13:37:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/13/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E6%8E%A7%E5%88%B6%E6%B5%81%E7%A8%8B/">Java 基础知识--控制流程</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Java 基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/13/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E6%8E%A5%E5%8F%A3/" class="archive-article-date">
-  	<time datetime="2020-07-13T13:35:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/13/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E6%8E%A5%E5%8F%A3/">Java 基础知识--接口</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Java 基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/11/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" class="archive-article-date">
-  	<time datetime="2020-07-11T13:14:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/11/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">Java 基础知识--面向对象</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Java基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/09/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-Object%EF%BC%9A%E6%89%80%E6%9C%89%E7%B1%BB%E7%9A%84%E8%B6%85%E7%B1%BB/" class="archive-article-date">
-  	<time datetime="2020-07-09T10:37:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/09/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-Object%EF%BC%9A%E6%89%80%E6%9C%89%E7%B1%BB%E7%9A%84%E8%B6%85%E7%B1%BB/">Java 基础知识--Object：所有类的超类</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Java基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/09/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E7%B1%BB%E3%80%81%E8%B6%85%E7%B1%BB%E5%92%8C%E5%AD%90%E7%B1%BB/" class="archive-article-date">
-  	<time datetime="2020-07-09T08:12:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/09/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E7%B1%BB%E3%80%81%E8%B6%85%E7%B1%BB%E5%92%8C%E5%AD%90%E7%B1%BB/">Java 基础知识--类、超类和子类</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Java基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/03/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86--%E6%95%B0%E7%BB%84/" class="archive-article-date">
-  	<time datetime="2020-07-03T14:47:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/03/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86--%E6%95%B0%E7%BB%84/">Java 基础知识--数组</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Java基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/02/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%8E%AF%E5%A2%83/" class="archive-article-date">
-  	<time datetime="2020-07-02T14:42:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/02/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%8E%AF%E5%A2%83/">第2章  Java 程序设计环境</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Java基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -559,8 +430,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
