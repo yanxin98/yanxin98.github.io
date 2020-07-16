@@ -15,11 +15,13 @@
 <meta property="og:site_name" content="颜鑫的技术之旅">
 <meta property="og:description" content="3.1    一个简单的 Java 应用程序12345public class FirstSample&amp;#123;	public static void main(String[] args)&amp;#123;		System.out.println(&quot;We will not use &#39;Hello, World!&#39;&quot;);	&amp;#125;&amp;#125;  首先，Java 区分大小写。如果出现了大小写拼写错误（">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/2020/07/13/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%9F%BA%E6%9C%AC%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%BB%93%E6%9E%84/D:%5Cmyblog%5Csource_posts%5CJava-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%9F%BA%E6%9C%AC%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%BB%93%E6%9E%84%5C1.png">
 <meta property="article:published_time" content="2020-07-13T13:43:24.000Z">
-<meta property="article:modified_time" content="2020-07-13T13:50:24.964Z">
+<meta property="article:modified_time" content="2020-07-16T14:07:06.133Z">
 <meta property="article:author" content="颜鑫">
 <meta property="article:tag" content="Java基础">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/07/13/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%9F%BA%E6%9C%AC%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%BB%93%E6%9E%84/D:%5Cmyblog%5Csource_posts%5CJava-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%9F%BA%E6%9C%AC%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%BB%93%E6%9E%84%5C1.png">
   
     <link rel="alternative" href="/atom.xml" title="颜鑫的技术之旅" type="application/atom+xml">
   
@@ -63,8 +65,8 @@
 			</ul>
 		</nav>
 		<nav>
-			<a>总文章数 21</a>
-			<a>总字数 <span class="post-count">59.8k</span></a>
+			<a>总文章数 22</a>
+			<a>总字数 <span class="post-count">65.8k</span></a>
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -158,7 +160,7 @@
       </header>
     
 	<div align="center" class="post-count">
-		字数：8.1k字 | 预计阅读时长：31分钟
+		字数：8k字 | 预计阅读时长：31分钟
 	</div>
     <div class="article-entry" itemprop="articleBody">
       
@@ -342,7 +344,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> java.lang.Math.*;</span><br><span class="line"></span><br><span class="line">		System.out.println(<span class="string">"The square root of \u03C0 is "</span> + sqet(PI));</span><br></pre></td></tr></table></figure>
 
 <h3 id="3-5-3-数值类型之间的转换"><a href="#3-5-3-数值类型之间的转换" class="headerlink" title="3.5.3    数值类型之间的转换"></a>3.5.3    数值类型之间的转换</h3><p>我们经常需要将一种数值类型转换为另一种数值类型。</p>
-<p>![](D:\myblog\source_posts\Java 基础知识\Java-基础知识-基本程序设计结构\1.png)</p>
+<p><img src="/2020/07/13/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%9F%BA%E6%9C%AC%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%BB%93%E6%9E%84/D:%5Cmyblog%5Csource_posts%5CJava-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%9F%BA%E6%9C%AC%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%BB%93%E6%9E%84%5C1.png" alt></p>
 <p>在图中有 6 个实线箭头，表示无信息丢失的转换；另外有 3 个虚线箭头，表示可能有精度损失的转换。例如，123456789 是一个大整数，它所包含的位数比 float 类型所能够表示的位数多。当将这个整数转换为 float 类型时，将会得到正确的大小，但是会损失一些精度。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n = <span class="number">123456789</span>;</span><br><span class="line"><span class="keyword">float</span> f = n;<span class="comment">//f is 1.234567892E8</span></span><br></pre></td></tr></table></figure>
 
@@ -699,6 +701,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2020/07/16/Java%20%E4%B8%AD%E7%BA%A7/Java-%E4%B8%AD%E7%BA%A7%E7%9F%A5%E8%AF%86-%E5%BC%82%E5%B8%B8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Java 中级知识--异常
+        
+      </div>
+    </a>
+  
   
     <a href="/2020/07/13/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%86%85%E9%83%A8%E7%B1%BB/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">Java 基础知识--内部类</div>
@@ -843,6 +854,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Java 中级</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Java基础</a>
